@@ -12,6 +12,7 @@ import { UserComponent } from './user/user.component';
 import { EventComponent } from './event/event.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { UserPipe } from './user.pipe';
 // import { AdminComponent } from './admin/admin.component';
 
 export const firebaseConfig = {
@@ -29,6 +30,7 @@ export const firebaseConfig = {
     EventComponent,
     UserDetailComponent,
     EditUserComponent,
+    UserPipe,
     // AdminComponent
   ],
   imports: [

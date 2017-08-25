@@ -1,15 +1,29 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../user.model';
+import { Router } from '@angular/router';
+import { UserService } from '../user.service';
+import { FirebaseListObservable } from 'angularfire2/database';
+
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  styleUrls: ['./user.component.css'],
+  providers: [UserService]
 })
 export class UserComponent implements OnInit {
+  // users: Users[];
+  users: FirebaseListObservable<any[]>;
 
-  constructor() { }
+  constructor(private router: Router, private userService: UserService) {}
 
   ngOnInit() {
+    this.users = this.userService.getUsers();
+  }
+
+  submitForm(name: string, title: string, description: string, image: string, website: string) {
+    var newUser: User = new User(name, title, description, image, website);
+    this.userService.addUser(newUser);
   }
 
 }

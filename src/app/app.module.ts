@@ -11,6 +11,7 @@ import { AboutComponent } from './about/about.component';
 import { UserComponent } from './user/user.component';
 import { EventComponent } from './event/event.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -25,7 +26,8 @@ export const firebaseConfig = {
     AboutComponent,
     UserComponent,
     EventComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule,

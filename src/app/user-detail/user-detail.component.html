@@ -3,3 +3,5 @@
 <br>
 <h4>"{{(userToDisplay | async).website}}"</h4>
 <img src="{{(userToDisplay | async).image}}" alt="pic of user">
+
+<app-edit-user [selectedUser]="userToDisplay | async"></app-edit-user>

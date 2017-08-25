@@ -30,13 +30,56 @@ export var masterFirebaseConfig = {
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
 ## User Story
-* As a user, I want to see all of the categories on the main page.
-* As a user, I want to click a category to navigate to a page with all its listings.
-* As a user, I want to click a listing to see its contents.
-* As a user, I want to click on a listing to view its details.
-* As a user, I want to add a new listing to a category of my choosing.
-* As a user, I want the option to update my listing, if I need to.
-* As a user, I want the option to delete my listing if I no longer need it.
+* As a user, I'd like to visit a page to see a list of all team or club members.
+* As a user, I'd like to click a team or club member's entry in the list to visit their profile page, which should include more details about them.
+* As a user, I'd like the option to visit an "About" page that explains what the club is, and what they do.
+* As a user, I'd like all data persisted in a database, so it's always there when I need it.
+* As an administrator, I want to add new users to the club. (User authentication is not required).
+* As an administrator, I want to edit user profiles, in case I make a mistake, or need to update their details.
+* As an administrator, need the option to delete a user, in case they leave the club or team.
+
+## Planning
+1. Configuration/dependencies
+  * Generate new project using `ng new FreQs`
+  * Initialize Bower
+  * Add Boostrap to project
+  * Create a firebase project and add configuration to project
+
+2. Specs
+  * Specs are as listed above in the User Story
+
+3. Integration
+  * Initial routes or index pages with all dependencies in Controller/index.html head
+  * Template/html page for viewing all members.
+    * New users will also be added on this page with full CRUD functionality.
+  * Template for about page.
+  * Template/html page for events.
+    * This will include dynamic routing to view an individual event.
+      * Hosted by:
+      * Cost:
+      * Location:
+      * Event Description
+      * Ability to add Photo
+    * This will also include a pipe to filter by type of event.
+  <!-- * Template/html page for ... (one for each route/integrated user story)
+  * Display...
+  * Integrate feature that... -->
+
+4. UX/UI
+  * Include and modify bootstrap/materialize/Sass etc.
+  * Develop custom style
+
+5. Polish
+  * Refactor minor portion of...
+  * Delete unused...
+  * Make README awesome
+
+6. Wishlist
+  * Have ability to show events in organized time line.
+  * Deploy to firebase.
+  * Be able to show past events hosted by a user.
+  * Have the ability for a user to be checked as having attended an event.
+  * Have the ability for a user to view their past events.
 
 ## Screenshot of Program
 ![Preview of for Sale Post](src/assets/img/forSale.png)

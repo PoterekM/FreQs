@@ -1,7 +1,22 @@
-<h2>{{(userToDisplay | async).name}}</h2>
-<h4>{{(userToDisplay | async).title}}, {{(userToDisplay | async).description}}</h4>
-<br>
-<h4>"{{(userToDisplay | async).website}}"</h4>
-<img src="{{(userToDisplay | async).image}}" alt="pic of user">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-7">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2>{{(userToDisplay | async).name}}</h2> <em>{{(userToDisplay | async).title}}</em>
+        </div>
+        <div class="panel-body">
+          <img src="{{(userToDisplay | async).image}}" alt="pic of user">
+          <br>
+          {{(userToDisplay | async).description}}
+          <br>
+          {{(userToDisplay | async).website}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <app-edit-user [selectedUser]="userToDisplay | async"></app-edit-user>
+    </div>
 
-<app-edit-user [selectedUser]="userToDisplay | async"></app-edit-user>
+  </div>
+</div>

@@ -6,12 +6,12 @@ import { UsersComponent } from './users/users.component';
 
 const appRoutes: Routes = [
   {
-    path: 'about',
-    component: AboutComponent
-  },
-  {
     path: '',
     component: EventsComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
   },
   {
     path: 'users',

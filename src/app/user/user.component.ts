@@ -21,6 +21,7 @@ export class UserComponent implements OnInit {
   }
 
   submitForm(name: string, title: string, description: string, image: string, website: string, priority: string) {
+    // this.priority = null;
     var newUser: User = new User(name, title, description, image, website, priority);
     this.userService.addUser(newUser);
   }

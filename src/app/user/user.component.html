@@ -36,8 +36,8 @@
         <div>
           <label>What brings you here?</label>
           <br>
-          <input type="radio" [(ngModel)]="selectedUser.priority" [value]="musicMaker">I make music<br>
-          <input type="radio" [(ngModel)]="selectedUser.priority" [value]="eventGoer">I want to attend events<br>
+          <input type="radio" #newPriority [value]="musicMaker">I make music<br>
+          <input type="radio" #newPriority [value]="eventGoer">I want to attend events<br>
         </div>
       </div>
       <br>

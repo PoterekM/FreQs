@@ -28,7 +28,8 @@ export class UserService {
                                 title: localUpdatedUser.title,
                                 description: localUpdatedUser.description,
                                 image: localUpdatedUser.image,
-                                website: localUpdatedUser.website});
+                                website: localUpdatedUser.website,
+                                priority: localUpdatedUser.priority});
   }
 
   deleteUser(localUserToDelete) {

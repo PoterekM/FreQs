@@ -33,15 +33,15 @@
           <br>
           <input #newWebsite>
         </div>
-        <!-- <div>
+        <div>
           <label>What brings you here?</label>
           <br>
-          <input type="radio" [(ngModel)]="selectedTask.priority" [value]="musicMaker">I make music<br>
-          <input type="radio" [(ngModel)]="selectedTask.priority" [value]="eventGoer">I want to attend events<br>
-        </div> -->
+          <input type="radio" [(ngModel)]="selectedUser.priority" [value]="musicMaker">I make music<br>
+          <input type="radio" [(ngModel)]="selectedUser.priority" [value]="eventGoer">I want to attend events<br>
+        </div>
       </div>
       <br>
-      <button (click)="submitForm(newName.value, newTitle.value, newDescription.value, newImage.value, newWebsite.value); newName.value=''; newTitle.value=''; newDescription.value=''; newImage.value=''; newWebsite.value='';">Add new member</button>
+      <button (click)="submitForm(newName.value, newTitle.value, newDescription.value, newImage.value, newWebsite.value, newPriority.value); newName.value=''; newTitle.value=''; newDescription.value=''; newImage.value=''; newWebsite.value=''; newWebsite.priority='';">Add new member</button>
     </div>
 
 

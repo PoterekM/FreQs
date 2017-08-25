@@ -16,7 +16,7 @@
         </div>
       </div>
     </div>
-    <div class="col-md-5">
+    <div class="col-md-5" *ngIf="currentRoute === '/admin'">
       <app-edit-user [selectedUser]="userToDisplay | async"></app-edit-user>
     </div>
   </div>

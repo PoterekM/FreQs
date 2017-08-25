@@ -1,3 +1,23 @@
-<p>
-  admin works!
-</p>
+<h4>Edit {{selectedUser.name}}'s profile</h4>
+
+<label>New Name:</label>
+<input [(ngModel)]="selectedUser.name">
+<br>
+
+<label>Change title:</label>
+<input [(ngModel)]="selectedUser.title">
+<br>
+
+<label>New description:</label>
+<input [(ngModel)]="selectedUser.description">
+<br>
+
+<label>New image:</label>
+<input [(ngModel)]="selectedUser.image">
+<br>
+
+<label>Change website:</label>
+<input [(ngModel)]="selectedUser.website">
+<br>
+<button (click)="beginUpdatingUser(selectedUser)">Update user</button>
+<button (click)="beginDeletingUser(selectedUser)">Delete User</button>

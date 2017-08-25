@@ -12,7 +12,6 @@ import { FirebaseListObservable } from 'angularfire2/database';
   providers: [UserService]
 })
 export class UserComponent implements OnInit {
-  // users: Users[];
   users: FirebaseListObservable<any[]>;
 
   constructor(private router: Router, private userService: UserService) {}
@@ -28,6 +27,10 @@ export class UserComponent implements OnInit {
       // , reason
     );
     this.userService.addUser(newUser);
+  }
+
+  goToDetailPage(clickedUser) {
+    this.router.navigate(['user', clickedUser.$key]);
   }
 
 }

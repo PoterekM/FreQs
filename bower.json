@@ -1,0 +1,20 @@
+{
+  "name": "fre-qs",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Michelle Poterek <poterekm@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/PoterekM/template",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

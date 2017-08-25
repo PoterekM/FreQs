@@ -4,7 +4,7 @@ import { AboutComponent } from './about/about.component';
 import { EventComponent } from './event/event.component';
 import { UserComponent } from './user/user.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
-import { AdminComponent } from './admin/admin.component';
+// import { AdminComponent } from './admin/admin.component';
 
 const appRoutes: Routes = [
   {
@@ -23,10 +23,10 @@ const appRoutes: Routes = [
     path: 'user/:id',
     component: UserDetailComponent
   },
-  {
-    path: 'admin',
-    component: AdminComponent
-  },
+  // {
+  //   path: 'admin',
+  //   component: AdminComponent
+  // },
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

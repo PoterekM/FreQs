@@ -25,6 +25,7 @@ export class UserDetailComponent implements OnInit {
       this.userId = (urlParameters['id']);
     });
     this.userToDisplay = this.userService.getUserById(this.userId);
+    console.log(this.userToDisplay);
   }
 
 }

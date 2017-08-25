@@ -1,3 +1,5 @@
 export class User {
-  constructor (public name: string, public title: string, public description: string, public image: string, public website: string) { }
+  constructor (public name: string, public title: string, public description: string, public image: string, public website: string
+    // , public reason: string
+  ) { }
 }

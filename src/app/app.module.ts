@@ -8,8 +8,8 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AboutComponent } from './about/about.component';
-import { UsersComponent } from './users/users.component';
-import { EventsComponent } from './events/events.component';
+import { UserComponent } from './user/user.component';
+import { EventComponent } from './event/event.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -22,8 +22,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     AboutComponent,
-    UsersComponent,
-    EventsComponent
+    UserComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,

@@ -27,7 +27,7 @@
           <input #newTitle>
         </div>
         <div>
-          <label>Description:</label>
+          <label>Tell us about yourself:</label>
           <br>
           <input #newDescription>
         </div>
@@ -37,7 +37,7 @@
           <input #newImage>
         </div>
         <div>
-          <label>Add your website</label>
+          <label>Add your website:</label>
           <br>
           <input #newWebsite>
         </div>
@@ -54,9 +54,5 @@
       <br>
       <button (click)="submitForm(newName.value, newTitle.value, newDescription.value, newImage.value, newWebsite.value, newPriority.value); newName.value=''; newTitle.value=''; newDescription.value=''; newImage.value=''; newWebsite.value='';">Add new member</button>
     </div>
-
-
-
   </div>
-
 </div>

@@ -2,9 +2,18 @@
 #### _Epicodus Angular Javascript Independent Project: Angular CLI, Dynamic Routing, and Persistent Data with Firebase, August 25, 2017_
 _**By Michelle Poterek**_
 
+
+## Description
+This project is meant to be used for individuals in the noise community in Portland as an alternative to Facebook events. Users are able to register as a musician, event attendee, or an organizer. Users are able to browse users by this criteria as well in the event that they are looking for a fellow user to contact.
+
 ## Installation instructions
-* $ `npm install`
-* $ `bower install`
+* Open Terminal and type:
+* `$ cd Desktop`
+* `$ git clone https://github.com/PoterekM/FreQs.git`
+* `$ cd FreQs`
+* `$ npm install`
+* `$ bower install`
+* `$ atom .`
 * for firebase:
 * First off, you'll need to make a free account at Firebase's website. [Firebase](https://www.learnhowtoprogram.com/javascript/angular-extended/firebase-introduction-and-setup)
 * Create a New Project. Select this option, provide a name for your new project, and select your Country/region from the drop-down menu.
@@ -24,10 +33,10 @@ export var masterFirebaseConfig = {
 
 ````
 * With the information provided in the modal, replace the "xxxx" variables with your own firebase credentials in your api-keys.ts file.
+* Be sure to save these changes in atom.
 * In Terminal, run `$ ng serve`
 * In your Browser (Chrome preferred) navigate to [http://localhost:4200/](http://localhost:4200/)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
 ## User Story
 * As a user, I'd like to visit a page to see a list of all team or club members.
@@ -81,9 +90,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   * Have the ability for a user to be checked as having attended an event.
   * Have the ability for a user to view their past events.
 
-## Screenshot of Program
+<!-- ## Screenshot of Program
 ![Preview of for Sale Post](src/assets/img/forSale.png)
-_This image is a screenshot of an individual posting_
+_This image is a screenshot of an individual posting_ -->
 
 ## Technologies Used
 * Angular CLI
@@ -93,8 +102,18 @@ _This image is a screenshot of an individual posting_
 * Firebase
 * Bootstrap, CSS, and HTML
 
-----
+## Known Bugs
+* The design for the selection of user priority is flawed- these will be changed to checkboxes in the near future.
+* The admin route is not functional. Any user is able to edit or delete another user.
 
+## Support and contact details
+Please feel free to contact me directly via e-mail at poterekm@gmail.com if you have any questions, comments, ideas, or feedback. Also, I invite you to feel empowered to make any changes to this repository by forking it and making changes accordingly.
+
+## License Information
+This web application is free to use under the MIT License &copy; Michelle Poterek
+
+----
+## Additional Information for Developers
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

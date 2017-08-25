@@ -8,17 +8,16 @@
         <div class="panel-body">
           <img src="{{(userToDisplay | async).image}}" alt="pic of user">
           <br>
-          {{(userToDisplay | async).description}}
+          <strong>User Description:</strong>{{(userToDisplay | async).description}}
           <br>
-          {{(userToDisplay | async).priority}}
+          <strong>Status:</strong> {{(userToDisplay | async).priority}}
           <br>
-          {{(userToDisplay | async).website}}
+          <strong>Website:</strong>{{(userToDisplay | async).website}}
         </div>
       </div>
     </div>
     <div class="col-md-5">
       <app-edit-user [selectedUser]="userToDisplay | async"></app-edit-user>
     </div>
-
   </div>
 </div>

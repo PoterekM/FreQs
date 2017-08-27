@@ -7,7 +7,6 @@ import { UserService } from '../user.service';
 import { FirebaseObjectObservable } from 'angularfire2/database';
 
 
-
 @Component({
   selector: 'app-user-detail',
   templateUrl: './user-detail.component.html',
@@ -17,7 +16,7 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
 export class UserDetailComponent implements OnInit {
   userId: string;
   userToDisplay;
-  // currentRoute: string = this.router.url;
+
 
   constructor(private route: ActivatedRoute, private location: Location, private userService: UserService) {}
 

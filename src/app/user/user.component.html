@@ -1,63 +1,65 @@
-<!-- <h1>Users</h1>
+<h1>Users</h1>
 <select (change)="onChange($event.target.value)">
    <option value="allUsers" selected="selected">All Users</option>
    <option value="optionMakers">Musicians</option>
    <option value="optionOrganizers">Event Organizers</option>
- </select> -->
+ </select>
 
 
 <div class="container">
   <div class="row">
     <div class="col-md-7">
       <div *ngFor="let user of users | async | userPipe:filterByUser" (click)="goToDetailPage(user)">
-        <h3>{{user.name}} <em>{{user.title}}</em></h3>
-          <p>{{user.name}}</p>
-          <hr>
-        <div *ngIf="currentRoute === '/admin'">
-          <app-edit-user [selectedUser]="user"></app-edit-user>
+        <div class="well">
+          <h3>{{user.name}} <em>{{user.title}}</em></h3>
+          <div *ngIf="currentRoute === '/admin'">
+            <app-edit-user [selectedUser]="user"></app-edit-user>
+          </div>
         </div>
       </div>
     </div>
     <div class="col-md-5">
-      <h3>Join us!</h3>
-      <div>
+      <div class="well">
+        <h3>Join us!</h3>
         <div>
-          <label>User Name:</label>
-          <br>
-          <input #newName>
+          <div>
+            <label>User Name:</label>
+            <br>
+            <input #newName>
+          </div>
+          <div>
+            <label>Title:</label>
+            <br>
+            <input #newTitle>
+          </div>
+          <div>
+            <label>Tell us about yourself:</label>
+            <br>
+            <input #newDescription>
+          </div>
+          <div>
+            <label>Add a profile picture</label>
+            <br>
+            <input #newImage>
+          </div>
+          <div>
+            <label>Add your website:</label>
+            <br>
+            <input #newWebsite>
+          </div>
+          <div>
+            <label>What brings you here?:</label>
+            <div #newPriority>
+            <select #newPriority>
+              <option value="attendee"> I like to attend events </option>
+              <option value="noise-maker"> I make music </option>
+              <option value="organizer"> I organize events </option>
+            </select>
+          </div>
         </div>
-        <div>
-          <label>Title:</label>
-          <br>
-          <input #newTitle>
-        </div>
-        <div>
-          <label>Tell us about yourself:</label>
-          <br>
-          <input #newDescription>
-        </div>
-        <div>
-          <label>Add a profile picture</label>
-          <br>
-          <input #newImage>
-        </div>
-        <div>
-          <label>Add your website:</label>
-          <br>
-          <input #newWebsite>
-        </div>
-        <div>
-          <label>What brings you here?:</label>
-          <div #newPriority>
-          <select #newPriority>
-            <option value="attendee"> I like to attend events </option>
-            <option value="noise-maker"> I make music </option>
-            <option value="organizer"> I organize events </option>
-          </select>
-        </div>
+        <br>
+        <button (click)="submitForm(newName.value, newTitle.value, newDescription.value, newImage.value, newWebsite.value, newPriority.value); newName.value=''; newTitle.value=''; newDescription.value=''; newImage.value=''; newWebsite.value='';">Add new member</button>
       </div>
-      <br>
-      <button (click)="submitForm(newName.value, newTitle.value, newDescription.value, newImage.value, newWebsite.value, newPriority.value); newName.value=''; newTitle.value=''; newDescription.value=''; newImage.value=''; newWebsite.value='';">Add new member</button>
     </div>
   </div>
 </div>

@@ -16,8 +16,10 @@
         </div>
       </div>
     </div>
-    <div class="col-md-5" *ngIf="currentRoute === '/admin'">
-      <app-edit-user [selectedUser]="userToDisplay | async"></app-edit-user>
+    <div *ngIf="currentRoute === '/admin'">
+      <p>{{user.name}}</p>
+      <hr>
+      <app-edit-user [selectedUser]="user"></app-edit-user>
     </div>
   </div>
 </div>

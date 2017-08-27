@@ -12,6 +12,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
   providers: [UserService]
 })
 export class UserComponent implements OnInit {
+  // currentRoute: string = this.router.url;
   users: FirebaseListObservable<any[]>;
   filterByUser: string = "allUsers";
 
@@ -19,10 +20,10 @@ export class UserComponent implements OnInit {
 
   ngOnInit() {
     this.users = this.userService.getUsers();
+    console.log(this.router.url);
   }
 
   submitForm(name: string, title: string, description: string, image: string, website: string, priority: string) {
-    // this.priority = null;
     var newUser: User = new User(name, title, description, image, website, priority);
     this.userService.addUser(newUser);
   }

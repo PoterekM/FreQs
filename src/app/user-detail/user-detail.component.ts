@@ -27,4 +27,5 @@ export class UserDetailComponent implements OnInit {
     this.userToDisplay = this.userService.getUserById(this.userId);
   }
 
+
 }

@@ -11,13 +11,14 @@
     <div class="col-md-7">
       <div *ngIf="currentRoute === '/user'">
         <div *ngFor="let user of users | async | userPipe:filterByUser" (click)="goToDetailPage(user)">
+          <h3>{{user.name}} <em>{{user.title}}</em></h3>
         </div>
       </div>
 
+      <div *ngIf="currentRoute === '/admin'">
       <div *ngFor="let user of users | async | userPipe:filterByUser">
         <div class="well">
           <h3>{{user.name}} <em>{{user.title}}</em></h3>
-          <div *ngIf="currentRoute === '/admin'">
             <app-edit-user [selectedUser]="user"></app-edit-user>
           </div>
         </div>
